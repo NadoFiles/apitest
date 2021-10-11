@@ -8,8 +8,7 @@ This project is used to automation test using FakeAPI with Robot Framework.
 #### Install the items
 
 1. Visual Code + extension - Robot Framework Language Server
-2. Java Development Kit 8 or 11
-3. Python 3 or superior
+2. Python 3 or above
 
 
 ---
@@ -25,52 +24,7 @@ This project is used to automation test using FakeAPI with Robot Framework.
 robot -d ./logs api/tests/booksTest.robot
 ```
 
-```bash
-robot -d ./logs app/tests/homeTest.robot
-```
-
-```bash
-robot -d ./logs app/tests/loginTest.robot
-```
-
-```bash
-robot -d ./logs app/tests/radioTest.robot
-```
-
-```bash
-robot -d ./logs app/tests/checkboxTest.robot
-```
-
-```bash
-robot -d ./logs -i long  app/tests/buttonTest.robot
-```
-
-```bash
-robot -d ./logs -i long  app/tests/spinnerTest.robot
-```
-
-```bash
-robot -d ./logs -i long  app/tests/swiperTest.robot
-```
-
-```bash
-robot -d ./logs -i long  app/tests/drag-and-dropTest.robot
-```
-
-
-
-3. Run test with tags ("i" to include and "e" to exclude)
-
-```bash
-robot -d ./logs -i long  app/tests/buttonTest.robot
-```
-
-```bash
-robot -d ./logs -e long  app/tests/buttonTest.robot
-```
-
-
-4. Access on project '.logs/report.html' and open Chrome browser to see results.
+3. Access on project '.logs/report.html' and open Chrome browser to see results.
 
 
 ---
