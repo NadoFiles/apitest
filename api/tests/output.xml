@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on darwin)" generated="20211012 11:10:37.987" rpa="false" schemaversion="2">
+<suite id="s1" name="Robot Interactive Console" source="/Users/alefecardozo/.vscode/extensions/robocorp.robotframework-lsp-0.23.2/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Requisitar o livro">
+<arg>15</arg>
+<msg timestamp="20211012 11:10:40.232" level="FAIL">No keyword with name 'Requisitar o livro' found.</msg>
+<status status="FAIL" starttime="20211012 11:10:40.232" endtime="20211012 11:10:40.232"/>
+</kw>
+<kw name="Conferir o status code">
+<arg>200</arg>
+<status status="NOT RUN" starttime="20211012 11:10:40.234" endtime="20211012 11:10:40.234"/>
+</kw>
+<kw name="Conferir o reason">
+<arg>OK</arg>
+<status status="NOT RUN" starttime="20211012 11:10:40.236" endtime="20211012 11:10:40.236"/>
+</kw>
+<status status="PASS" starttime="20211012 11:10:38.081" endtime="20211012 11:10:49.350"/>
+</kw>
+<status status="PASS" starttime="20211012 11:10:38.079" endtime="20211012 11:10:49.352"/>
+</test>
+<status status="PASS" starttime="20211012 11:10:37.991" endtime="20211012 11:10:49.356"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
