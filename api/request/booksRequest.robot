@@ -22,6 +22,12 @@ ${DATA}                          {"id": 1,"title": "harry potter","description":
 
 ${DATA_NEW}                      {"id": 2,"title": "harry potter new book","description": "harry potter e a camera secreta","pageCount": 250,"excerpt": "livro em papel","publishDate": "2023-10-16T19:26:33.508Z"}
 
+&{DICTIONARY_BOOK_NEW_EDIT}      id=2
+...                              title=harry potter new book
+...                              description=harry potter e a camera secreta
+...                              pageCount=250
+...                              excerpt=livro em papel
+...                              publishDate=2023-10-16T19:26:33.508Z
 
 *** Keywords ***
 
@@ -106,3 +112,16 @@ Conferir se retorna todos os dados do livro cadastrado
     Dictionary Should Contain Item    ${RESPONSE.json()}    pageCount     ${DICTIONARY_BOOK_NEW.pageCount}
     Dictionary Should Contain Item    ${RESPONSE.json()}    excerpt       ${DICTIONARY_BOOK_NEW.excerpt}
     Dictionary Should Contain Item    ${RESPONSE.json()}    publishDate   ${DICTIONARY_BOOK_NEW.publishDate}
+
+##Check data json    
+Conferir se retorna todos os dados do livro editado
+    Dictionary Should Contain Item    ${RESPONSE.json()}    id            ${DICTIONARY_BOOK_NEW_EDIT.id}
+    Dictionary Should Contain Item    ${RESPONSE.json()}    title         ${DICTIONARY_BOOK_NEW_EDIT.title}
+    Dictionary Should Contain Item    ${RESPONSE.json()}    description   ${DICTIONARY_BOOK_NEW_EDIT.description}
+    Dictionary Should Contain Item    ${RESPONSE.json()}    pageCount     ${DICTIONARY_BOOK_NEW_EDIT.pageCount}
+    Dictionary Should Contain Item    ${RESPONSE.json()}    excerpt       ${DICTIONARY_BOOK_NEW_EDIT.excerpt}
+    Dictionary Should Contain Item    ${RESPONSE.json()}    publishDate   ${DICTIONARY_BOOK_NEW_EDIT.publishDate}    
+
+##Check delete data
+Conferir se livro foi excluido
+    Should Be Empty    ${RESPONSE.content} 

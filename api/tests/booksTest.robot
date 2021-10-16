@@ -33,9 +33,11 @@ Deve alterar dados de um livro
     Requisitar alterar dados do livro    1
     Conferir o status code    200
     Conferir o reason    OK
+    Conferir se retorna todos os dados do livro editado
 
 ##DELETE ​/api​/v1​/Books​/{id}
 Deve excluir um livro
     Requisitar excluir livro    15
     Conferir o status code    200
     Conferir o reason    OK
+    Conferir se livro foi excluido
