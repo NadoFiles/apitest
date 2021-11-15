@@ -7,15 +7,16 @@ This project is used to automation test using FakeAPI with Robot Framework.
 
 #### Install the items
 
-1. Visual Code + extension - Robot Framework Language Server
+1. Visual Code + extension (Robot Framework Language Server + Robot Framework Language + Material Icon)
 2. Python 3 or above
+3. Jenkins 2.303.3 LTS - Generic Java package .war
 
 
 ---
 
-## Run Tests:
+## Run Tests in computer:
 
-#### To run tests on computer, download, get clone this project to your computer and execute the commands bellow:
+#### Get clone this project to your computer and execute the commands bellow:
 
 1. Open project with Visual Code.
 2. Run test with compiler or execute commands on Visual Code terminal.
@@ -31,9 +32,11 @@ This project is used to automation test using FakeAPI with Robot Framework.
 3. Access on project '.logs/report.html' and open Chrome browser to see results.
 
 
-#### To run tests Jenkins CI, download, get clone this project to your computer and execute the commands bellow:
+## Run Tests in Jenkins CI:
 
-1. Download Jenkins 2.303.3 LTS (Generic Java package .war) - https://www.jenkins.io/download/
+#### Get clone this project to your computer and execute the commands bellow:
+
+1. Download Jenkins.
 2. Run commands to access folder.
 
     ```bash
@@ -98,11 +101,3 @@ This project is used to automation test using FakeAPI with Robot Framework.
 
 
 ---
-
-## IMPORTANT
-
-* Before run the tests you need to install on terminal:
-
-```bash
-pip3 install robotframework-requests==0.9.2
-```
