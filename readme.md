@@ -34,7 +34,7 @@ This project is used to automation test using FakeAPI with Robot Framework.
 
 ## Run Tests in Jenkins CI:
 
-#### Get clone this project to your computer and execute the commands bellow:
+#### To run tests in Jenkins CI (job) - Get clone this project to your computer and execute the commands bellow:
 
 1. Download Jenkins.
 2. Run commands to access folder.
@@ -101,3 +101,76 @@ This project is used to automation test using FakeAPI with Robot Framework.
 
 
 ---
+
+#### To run tests in Jenkins CI (pipeline) - Execute the commands bellow:
+
+1. Download Jenkins.
+2. Run commands to access folder.
+
+    ```bash
+    cd Download
+    ```
+
+3. Run commands to start 'server' Jenkins.
+
+    ```bash
+    java -jar jenkins.war
+    or
+    java -jar jenkins.war —httpPort=9191
+    or
+    127.0.0.1:9191
+    ```
+
+4. Open browser and navigate to access Jenkins - http://localhost:8080
+
+5. Add plugin 'pipeline' on Jenkins.
+
+    In 'Dashboard'.
+    Click in 'Manager Jenkins'.
+    Click in 'Manager Plugins'.
+    Search 'Pipeline'.
+    Click in 'Install without program'.
+
+6. Create pipeline on Jenkins.
+
+    In 'Dashboard'.
+    Click in 'New Job'.
+    Choose name 'PipelineRobot'.
+    Click in 'Pipeline' and 'OK'.
+
+7. Run job 'robot framework' on Jenkins.
+
+    Open pipeline created.
+    
+    In 'configure'.
+    Click 'advanced project options'.
+    
+    In 'pipeline'.
+    Choose 'pipeline script' and paste code bellow:
+
+    ```bash
+        pipeline {
+        agent any
+
+        stages {
+            stage('Build') {
+                steps {
+                    echo 'Build starting...'
+                    git url: "https://github.com/alefecvo/api-robot-framework.git"
+                    sh(script:"pip3 install robotframework")
+                    sh(script:"pip3 install robotframework-requests")
+                }
+            }
+            stage('Test') {
+                steps {
+                    echo 'Test starting...'
+                    sh(script:"robot -d ./logs api/tests/booksTest.robot")
+                }
+            }
+        }
+    }
+    ```
+    
+    Click 'Apply' and 'Save'.
+
+8. Click in 'Build Now'.
